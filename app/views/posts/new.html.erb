@@ -1,0 +1,17 @@
+<%= link_to 'Back to all posts', posts_path %>
+
+<br/>
+
+
+<%= form_with model: @post do |form|%>
+<%= form.text_field :title, placeholder:'Write your title:'%>
+
+<br/>
+
+<%= form.text_field :description, placeholder:'Write your post description:'%>
+
+<br/>
+
+<%= form.submit 'Send post'%>
+
+<% end %>

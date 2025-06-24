@@ -1,0 +1,11 @@
+<%= link_to 'Back to all posts', posts_path %>
+
+<br/>
+
+<!--na linha abaixo deixei como new_post_path para seguir o padrão mas achei interessante anotar que  newposts/new também funciona -->
+<%= link_to 'Create a new post', new_post_path  %>
+
+
+<%@posts.each do |post|%>
+    <%= render partial: 'posts/post_template', locals: {post: post} %>  
+<% end %>
