@@ -1,4 +1,5 @@
 <div style="box-shadow: 0px 0px 10px rgba(10,10,100.3); padding: 20px;margin: 10px;">
+    
     <h1><%= post.title %></h1>
 
     <hr/>
@@ -7,5 +8,14 @@
 
     <hr/>
 
-    <small>Post written by:<%= post.user.email%></small>  
-</div>
+    <small>Post written by:<%= post.user.email%></small>
+
+    <% if post.user.id == current_user.id %>
+    
+    <hr/>
+
+    <%= link_to "Edit post", edit_post_path(post) %>
+    <%= button_to "Delete post", post, method: :delete %>
+    <% end%>
+
+    </div>

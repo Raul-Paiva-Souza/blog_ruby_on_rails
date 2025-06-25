@@ -1,8 +1,12 @@
+<header>Welcome <%= current_user.email %> !</header>
+
 <%= link_to 'Back to all posts', posts_path %>
 
 <br/>
 
-<!--na linha abaixo deixei como new_post_path para seguir o padrão mas achei interessante anotar que  newposts/new também funciona -->
+<!--PT BR na linha abaixo deixei como new_post_path para seguir o padrão mas achei interessante anotar que  newposts/new também funciona
+    EN in the line below I left it as new_post_path to follow the pattern but I thought it would be interesting to note that newposts/new also works
+     -->
 <%= link_to 'Create a new post', new_post_path  %>
 
 

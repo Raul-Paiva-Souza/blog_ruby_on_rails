@@ -1,4 +1,6 @@
-<%= link_to 'My Posts', my_posts_path%>
+<header>Welcome <%= current_user.email %> !</header>
+
+<%= link_to 'My posts', my_posts_path %>
 
 <%@posts.each do |post|%>
     <%= render partial: 'posts/post_template', locals: {post: post} %>  
